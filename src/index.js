@@ -1,29 +1,29 @@
-import React, { Children } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Accueil from './pages/Accueil'
-import Apropos from './pages/Apropos'
-import Locations from './pages/Locations'
-import Header from './components/Header'
-import Error from './components/Error'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Accueil from './pages/Accueil/Accueil';
+import Apropos from './pages/Apropos/Apropos'
+import Locations from './pages/Locations/Locations'
+import Error from './components/Error/Error'
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Accueil />,
+  },
+  {
+    path: "/locations",
+    element: <Locations />,
+  },   
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Router>
-      <Header />
-      <Routes>
-      <Route path= "/" element={<Accueil/>} />    
-    <Route path= "/apropos" element={<Apropos/>} />
-    <Route path= "*" element={<Error/>} />
-    <Route path= "/fichelogement" element={<Locations/>} />
-      </Routes>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
 
 
 
