@@ -5,18 +5,32 @@ import Accueil from './pages/Accueil/Accueil';
 import Apropos from './pages/Apropos/Apropos'
 import Locations from './pages/Locations/Locations'
 import Error from './components/Error/Error'
+import Layout from './components/Agencement/Layout'
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Accueil />,
-  },
-  {
-    path: "/locations",
-    element: <Locations />,
-  },   
+  { element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Accueil />,
+      },
+      {
+        path: "/apropos",
+        element: <Apropos />,
+      },
+      {
+        path: "/locations",
+        element: <Locations />,
+      },
+      {
+        path: "*",
+        element: <Error />,
+      }   
+    ]
+   }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
