@@ -1,10 +1,10 @@
 import Banner from "../../components/Agencement/Banner"
+import imgBannerAbout from "../../assets/BannerAbout.png"
 
 const Apropos = () => {
     return (
         <div>
-            <Banner titre="à propos" />
-            <p>blablabla à propos</p>
+            <Banner bgImage={imgBannerAbout} alt="montagne et forêt"/>
         </div>
     )
 }
