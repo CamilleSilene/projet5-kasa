@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Accueil from './pages/Accueil/Accueil';
 import Apropos from './pages/Apropos/Apropos';
-import Locations from './pages/Locations/Locations';
+import Logement from './pages/Logement/Logement';
 import Error from './components/Error/Error';
 import Layout from './components/Agencement/Layout';
 import './SASS/index.scss';
@@ -15,7 +15,7 @@ function AppRoutes () {
       <Route element={<Layout />}>
         <Route path="/" element={<Accueil/>} />
         <Route path="/apropos" element={<Apropos />} />
-        <Route path="/locations" element={<Locations />} />
+        <Route path="/logement/:id" element={<Logement />} />
         <Route path="*" element={<Error />} />
         </Route>
       </Routes>
