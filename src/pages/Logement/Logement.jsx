@@ -1,13 +1,12 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import logementsJson from '../../data/logements';
-import Error from "../../components/Error/Error";
 import './logement.scss';
 
 const Location = () => {
     const { id } = useParams();
     const logements = logementsJson.filter((l) => l.id === id );
     if(logements.length === 0) {
-        return (<Error />)
+        return <Navigate to ="/Error"/>
     }
 
     const logement = logements[0];
