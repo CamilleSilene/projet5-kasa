@@ -1,16 +1,34 @@
 import { useParams } from "react-router-dom";
-
-import logements from '../../data/logements';
+import logementsJson from '../../data/logements';
+import Error from "../../components/Error/Error";
+import './logement.scss';
 
 const Location = () => {
     const { id } = useParams();
-    const logement = logements.filter((l) => l.id === id )[0];
+    const logements = logementsJson.filter((l) => l.id === id );
+    if(logements.length === 0) {
+        return (<Error />)
+    }
 
+    const logement = logements[0];
     return (
         <div>
-            <h1>{logement.titre}</h1>
+            <div>Caroussel</div>
+            <h1>{logement.title}</h1>
+            <div>{logement.host.name} - <img src={logement.host.picture} alt="host" /></div>
+            <span>{logement.location}</span>
+            <p>{logement.description}</p>
+
+            <div>{logement.tags.map( tag => { 
+                return ( <span class="badge">{tag}</span>)
+            })}</div>
+
+            <div>Composant Rating</div>
+            <div>Accordeon Description (paragraphe)</div>
+            <div>Accordeon Equipements (liste)</div>
         </div>
     )
 }
 
-export default Location
+export default Location 
+

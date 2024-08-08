@@ -15,7 +15,7 @@ function AppRoutes () {
       <Route element={<Layout />}>
         <Route path="/" element={<Accueil/>} />
         <Route path="/apropos" element={<Apropos />} />
-        <Route path="/logement/:id" element={<Logement />} />
+        <Route path="/logement/:id" element={<Logement />} errorElement={<Error />}/>
         <Route path="*" element={<Error />} />
         </Route>
       </Routes>
