@@ -2,6 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import logementsJson from '../../data/logements';
 import './logement.scss';
 
+
 const Location = () => {
     const { id } = useParams();
     const logements = logementsJson.filter((l) => l.id === id );
@@ -22,7 +23,16 @@ const Location = () => {
                 return ( <span class="badge">{tag}</span>)
             })}</div>
 
-            <div>Composant Rating</div>
+            <div>Composant Rating : {logement.rating}</div>
+            {
+                Array.from(Array(5), (e,i) => {
+                    const starClass = i < logement.rating ? "fa-star-active" : "fa-star-inactive";
+                    const starClasses = `fa-solid fa-star ${starClass}`
+                    return (
+                        <i className={starClasses}></i>
+                    )
+                })
+            }
             <div>Accordeon Description (paragraphe)</div>
             <div>Accordeon Equipements (liste)</div>
         </div>
