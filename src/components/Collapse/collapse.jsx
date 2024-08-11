@@ -3,15 +3,20 @@ import React, {useState} from 'react';
 
 const Collapse = (props) => {
     const [isCollapsed, setIsCollapsed] = useState(false);
+    const collapsedClass = isCollapsed ? 'collapsed' : '';
+    const classes = `collapse ${collapsedClass}`;
+
     return (
-        <div>
+        <div className={classes}>
             <div className='collapse-header'>
                 <span>{props.titre}</span>
-                <button onClick={() => setIsCollapsed(!isCollapsed)}>
-                    {isCollapsed ? 'Réduire' : 'Développer'}
+                <button onClick={() => { 
+                    setIsCollapsed(!isCollapsed);
+                    } }>
+                    <div className="fa-solid fa-chevron-up"></div>
                 </button>
             </div>
-            {isCollapsed && <div className='collapse-content'>{props.children}</div>}
+            <div className='collapse-content'>{props.children}</div>
         </div>
       );
     }

@@ -32,7 +32,7 @@ const Location = () => {
                     const starClass = i < logement.rating ? "fa-star-active" : "fa-star-inactive";
                     const starClasses = `fa-solid fa-star ${starClass}`
                     return (
-                        <i className={starClasses}></i>
+                        <i key={i} className={starClasses}></i>
                     )
                 })
             }
