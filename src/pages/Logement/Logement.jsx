@@ -2,6 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import logementsJson from "../../data/logements";
 import "./logement.scss";
 import Collapse from "../../components/Collapse/collapse";
+import SlideShow from "../../components/Slideshow/Slideshow";
 
 const Location = () => {
   const { id } = useParams();
@@ -13,7 +14,7 @@ const Location = () => {
   const logement = logements[0];
   return (
     <div>
-      <div>Caroussel</div>
+      <div> <SlideShow slides={logement.pictures}/> </div>
       <h1>{logement.title}</h1>
 
       <div className="HostLogement">
