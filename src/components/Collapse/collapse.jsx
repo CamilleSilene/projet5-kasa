@@ -6,16 +6,16 @@ const Collapse = (props) => {
     //initialement c'est à false car il faut pouvoir faire apparaître le texte
 
     const [isCollapsed, setIsCollapsed] = useState(false);
-    //si l'élément est étendu alors on lui ajoute la classe 'collapsed' 
-    const collapsedClass = isCollapsed ? 'collapsed' : '';
+    //si l'élément est étendu alors on lui ajoute la classe 'collapsed'    
     //création de toutes les classes qui vont aller dans l'élément
-    // 'collapse' est la classe initiale de l'élément
-    const classes = `collapse ${collapsedClass}`;
+    // 'collapse' et 'collapsed' 
+
+    const classes = "collapse" + ( isCollapsed ? ' collapsed' : '' );
 
     return (
         <div className={classes}>
             <div className='collapse-header'>
-                <span>{props.titre}</span>
+                <span className='collapse-title'>{props.titre}</span>
                 <button onClick={() => { 
                     setIsCollapsed(!isCollapsed);
                     } }>

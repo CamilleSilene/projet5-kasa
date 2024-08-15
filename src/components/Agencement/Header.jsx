@@ -2,6 +2,8 @@ import * as React from "react";
 import { NavLink } from 'react-router-dom'
 import logoDesktopHeader from "../../assets/Desktop-Header.png"
  
+
+//utilisation de NavLink : par défaut une classe active est présente
 function Header() {
     return (
         <header className="header">
