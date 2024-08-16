@@ -4,6 +4,7 @@
     overflow: hidden;
     border-radius: 20px;
     
+    
 
     img {
         position: absolute;
@@ -20,12 +21,10 @@
     }
 
     h1 {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
+        position: absolute;     
         width: 100%;
         text-align: center;
+        top: 20px;
         color: rgb(255,255,255);
         font-size: 55px;
         text-shadow: 2px 2px 2px black;

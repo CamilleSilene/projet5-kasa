@@ -6,18 +6,20 @@ import './accueil.scss'
 
 const Accueil = () => {
     return (
-        <div>
-        <div>
+        <>
+        <div className="container-bannerhome">
             <Banner title="Chez vous, partout et ailleurs" bgImage={imgBannerHome} alt="falaise et océan" />            
         </div>
+        <div className="container-cardsList">
         <div className="CardsListWrapper">
             {
                 logements.map( (logement)=> <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
                 )
             }
        </div>
+       </div>
              
-      </div>
+      </>
     )
     
 }

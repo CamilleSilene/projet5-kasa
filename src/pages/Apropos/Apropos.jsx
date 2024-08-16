@@ -7,8 +7,10 @@ import './apropos.scss';
 const Apropos = () => {
     return (
         <div>
+        <div className="container-banner-apropos">
             <Banner bgImage={imgBannerAbout} alt="montagne et forêt"/>
-            <div className="containerCollapseApropos">            
+            </div>
+            <div className="container-CollapseApropos">            
             
             {aproposJson.map((item, index) => {
                 
