@@ -1,4 +1,11 @@
-$primary-color: #FF6060;
-$white-color : #ffffff
+$colors: (
+    primary: #FF6060,
+    white: #ffffff
+);
 
+$breakpoints: (
+    mobile: 1023.98px,
+    desktop: 1024px
+);
 
+$gap: 5%;

@@ -3,12 +3,13 @@ import './banner.scss'
 
 
 const Banner = (props) => {
+    const classes = 'banner ' + props.css;
     return (
-        <div className='banner'>
+        <div className={classes}>
             <img src={props.bgImage} alt="banner" />
-            { ( props.title !==undefined && props.title !=="" ) && 
+            { ( props.children !==undefined && props.children !=="" ) && 
                 <div className="fond">
-                    <h1>{props.title}</h1>
+                    <h1>{props.children}</h1>
                 </div>
             }
         </div>

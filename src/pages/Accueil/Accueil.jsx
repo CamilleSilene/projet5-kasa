@@ -8,7 +8,8 @@ const Accueil = () => {
     return (
         <>
         <div className="container-bannerhome">
-            <Banner title="Chez vous, partout et ailleurs" bgImage={imgBannerHome} alt="falaise et océan" />            
+            <Banner css="hidden-mobile" bgImage={imgBannerHome} alt="falaise et océan" >Chez vous, partout et ailleurs</Banner>
+            <Banner css="hidden-desktop align-left" bgImage={imgBannerHome} alt="falaise et océan" >Chez vous, <br/>partout et ailleurs</Banner>      
         </div>
         <div className="container-cardsList">
         <div className="CardsListWrapper">

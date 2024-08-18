@@ -1,5 +1,6 @@
 import { Navigate, useParams } from "react-router-dom";
 import logementsJson from "../../data/logements";
+
 import "./logement.scss";
 import Collapse from "../../components/Collapse/collapse";
 import SlideShow from "../../components/Slideshow/Slideshow";
@@ -25,14 +26,14 @@ const Location = () => {
       <div className="logementTitleAndHost">
       
       <div className="logementTitleAndLocation">
-      <h1>{logement.title}</h1>
+      <h1 className="text-primary">{logement.title}</h1>
       <div className="locationLogement">
       <span>{logement.location}</span>
       </div>
       </div>
 
       <div className="hostLogement">
-       <div className="hostLogementName"> {logement.host.name}</div> <img className="hostLogementImg" src={logement.host.picture} alt="host" />
+       <div className="hostLogementName text-primary"> {logement.host.name}</div> <img className="hostLogementImg" src={logement.host.picture} alt="host" />
       </div>
 
       
@@ -42,7 +43,7 @@ const Location = () => {
       <div className="tagLogement">
         {logement.tags.map((tag, index) => {
           return (
-            <span className="badge" key={index}>
+            <span className="badge background-primary text-white" key={index}>
               {tag}
             </span>
           );
@@ -52,7 +53,7 @@ const Location = () => {
       <div className="starLogement">
       {Array.from(Array(5), (e, index) => {
         const starClass =
-          index < logement.rating ? "fa-star-active" : "fa-star-inactive";
+          index < logement.rating ? "fa-star-active text-primary" : "fa-star-inactive";
         const starClasses = `fa-solid fa-star ${starClass}`;
         return <i key={index} className={starClasses}></i>;
       })}

@@ -1,4 +1,3 @@
-@import '../../SASS/base/variables.scss';
 
 .slideShow-container {
         position: relative;
@@ -38,7 +37,6 @@
     position: absolute;
     bottom: 0.5em;
     left: 50%;
-    color: $white-color;
     padding: 0.31em 0.62em;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -48,7 +46,6 @@
     display: flex;
     position: absolute;
     cursor: pointer;
-    color: $white-color;
     top: 45%;
     font-size: 50px;
 }

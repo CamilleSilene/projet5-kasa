@@ -29,5 +29,19 @@
         font-size: 55px;
         text-shadow: 2px 2px 2px black;
         z-index: 1;
+        
+    }
+
+}
+
+@media (max-width : 1023.98px) {
+    .banner {               
+        height: 20vh;
+        h1 {
+            font-size: 4vh;
+            text-align: left;
+            padding-left: 20px;
+        }
     }
 }
+    
