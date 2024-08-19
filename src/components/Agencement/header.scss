@@ -24,10 +24,11 @@
 
 @include mediamobile() {
     .header {
-        width: 100%;
 
         img {
-            width: 20%;
+            max-width: 20vw; /* find suitable value for you */
+            display: block;
+            width: 100%;
         }
 
         nav {

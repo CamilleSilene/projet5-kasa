@@ -17,3 +17,9 @@
 .container-bannerhome {
     padding: 30px;
 }
+
+@media (max-width : 1023.98px) {
+    .CardsListWrapper {
+        background-color: transparent;
+    }
+}

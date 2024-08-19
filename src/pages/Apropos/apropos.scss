@@ -1,3 +1,5 @@
+
+
 .container-banner-apropos {
     padding: 30px;
 }
@@ -10,6 +12,11 @@
     margin-top: 30px;
     margin-bottom: 40px;
     gap: 20px;
+}
 
-    
+@media screen and (max-width: 1023.98px){
+    .container-CollapseApropos {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }

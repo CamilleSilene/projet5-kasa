@@ -12,12 +12,12 @@ const Accueil = () => {
             <Banner css="hidden-desktop align-left" bgImage={imgBannerHome} alt="falaise et océan" >Chez vous, <br/>partout et ailleurs</Banner>      
         </div>
         <div className="container-cardsList">
-        <div className="CardsListWrapper">
-            {
-                logements.map( (logement)=> <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
-                )
-            }
-       </div>
+            <div className="CardsListWrapper">
+                {
+                    logements.map( (logement)=> <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
+                    )
+                }
+        </div>
        </div>
              
       </>
