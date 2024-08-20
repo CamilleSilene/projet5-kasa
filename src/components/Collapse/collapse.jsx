@@ -10,7 +10,7 @@ const Collapse = (props) => {
     //création de toutes les classes qui vont aller dans l'élément
     // 'collapse' et 'collapsed' 
 
-    const classes = "collapse" + ( isCollapsed ? ' collapsed' : '' );
+    const classes = props.css + " collapse" + ( isCollapsed ? ' collapsed' : '' );
 
     return (
         <div className={classes}>
@@ -22,7 +22,7 @@ const Collapse = (props) => {
                     <div className="fa-solid fa-chevron-up"></div>
                 </button>
             </div>
-            <div className='collapse-content'>{props.children}</div>
+            <div className='collapse-content background-secondary'>{props.children}</div>
         </div>
       );
     }

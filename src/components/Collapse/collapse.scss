@@ -6,10 +6,17 @@
 	.collapse-content {
         display: flex;
         flex-direction: column;
-          z-index: 1;          
-          overflow: hidden;        
-          border-radius: 0 0 5px 5px;
-          animation: fadeOut 0.6s ease forwards;
+        z-index: 1;          
+        overflow: hidden;        
+        border-radius: 0 0 5px 5px;
+        animation: fadeOut 0.6s ease forwards;
+        padding-left: 2%;
+        padding-right: 2%;
+
+        ul {
+          padding-inline-start: 0px; 
+          writing-mode: horizontal-tb;
+        }
 	}
 }
 

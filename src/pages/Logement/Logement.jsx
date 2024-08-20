@@ -21,57 +21,56 @@ const Location = () => {
   const logement = logements[0];
   return (
     <div className="logementBody">
-    <div className="logementCardDetails">
-      <div className="slideShow-container"> <SlideShow slides={logement.pictures}/> </div>
-      <div className="logementTitleAndHost">
+      <div className="slideShow-container">
+        {" "}
+        <SlideShow slides={logement.pictures} />{" "}
+      </div>
+      <div>
+      <div className="first-block col-mobile-1 col-desktop-2">
+        <h1 className="text-primary">{logement.title}</h1>
+        <div className="locationLogement">
+          <span>{logement.location}</span>
+        </div>
+        <div className="tagLogement">
+          {logement.tags.map((tag, index) => {
+            return (
+              <span className="badge background-primary text-white" key={index}>
+                {tag}
+              </span>
+            );
+          })}
+        </div>
+      </div>
       
-      <div className="logementTitleAndLocation">
-      <h1 className="text-primary">{logement.title}</h1>
-      <div className="locationLogement">
-      <span>{logement.location}</span>
-      </div>
-      </div>
+        <div class="second-block  col-mobile-1 col-desktop-2">
+          <div className="starLogement">
+            {Array.from(Array(5), (e, index) => {
+              const starClass = index < logement.rating ? "fa-star-active text-primary" : "fa-star-inactive";
+              const starClasses = `fa-solid fa-star ${starClass}`;
+              return <i key={index} className={starClasses}></i>;
+            })}
+          </div>
+          <div className="hostLogement">
+            <div className="hostLogementName text-primary">
+              {logement.host.name}
+            </div>
+            <img className="hostLogementImg" src={logement.host.picture} alt="host" />
+          </div>
 
-      <div className="hostLogement">
-       <div className="hostLogementName text-primary"> {logement.host.name}</div> <img className="hostLogementImg" src={logement.host.picture} alt="host" />
+        </div>
       </div>
-
       
-      </div>
-   
-      <div className="logementTagAndRating">
-      <div className="tagLogement">
-        {logement.tags.map((tag, index) => {
-          return (
-            <span className="badge background-primary text-white" key={index}>
-              {tag}
-            </span>
-          );
-        })}
-      </div>
-
-      <div className="starLogement">
-      {Array.from(Array(5), (e, index) => {
-        const starClass =
-          index < logement.rating ? "fa-star-active text-primary" : "fa-star-inactive";
-        const starClasses = `fa-solid fa-star ${starClass}`;
-        return <i key={index} className={starClasses}></i>;
-      })}
-      </div>
-      </div>
-
       <div className="collapseWrapperLogement">
-        <Collapse titre="Description">
+        <Collapse titre="Description" css="col-mobile-1 col-desktop-2">
           <p>{logement.description}</p>
         </Collapse>
-        <Collapse titre="Equipements">
-          <ul>
+        <Collapse titre="Equipements" css="col-mobile-1 col-desktop-2">
+          <ul className="collapse-list-style-none">
             {logement.equipments.map((equipment, index) => {
               return <li key={index}> {equipment}</li>;
             })}
           </ul>
         </Collapse>
-      </div>
       </div>
     </div>
   );

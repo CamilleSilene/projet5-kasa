@@ -30,6 +30,10 @@ body {
     }
     .col-mobile-1 {
         width: 100%;
+        margin-top: 2%;
+    }
+    div:has(.col-mobile-1) {
+        display: block;
     }
 }
 
@@ -40,7 +44,10 @@ body {
     .col-desktop-1 {
         width: 100%;
     }
+    .col-desktop-2 {
+        width: calc((100% - $gap) / 2);
+    }
     .col-desktop-3 {
-        width: calc((100% - $gap * 2) / 3);
+        width: calc((100% - $gap * 3) / 3);
     }
 }
