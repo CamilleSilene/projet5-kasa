@@ -3,6 +3,17 @@
     padding: 30px;
 }
 
+.logement-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media screen and (max-width: 1023.98px){
+    .logement-details {
+        flex-direction: column;
+    }
+}
+
 .hostLogement {    
     display: flex; 
     align-items: center;
@@ -27,11 +38,14 @@
 
 //tags
 .tagLogement {
+    display: flex;
+    //min-height: 50px;
     .badge {
         padding: 10px;
         margin-right: 2%;
         border-radius: 20px;
         text-align: center;
+        align-content: center;
     }
 }
 
@@ -57,5 +71,27 @@
     justify-content: space-between;
     .collapse-list-style-none {
         list-style: none;
+    }
+}
+
+.first-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+}
+
+@media screen and (max-width: 1023.98px){
+    .second-block {
+        flex-direction: row;
     }
 }

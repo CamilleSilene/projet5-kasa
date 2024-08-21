@@ -15,8 +15,8 @@ const Collapse = (props) => {
     return (
         <div className={classes}>
             <div className='collapse-header background-primary'>
-                <span className='collapse-title text-white'>{props.titre}</span>
-                <button className='background-primary text-white' onClick={() => { 
+                <span className='collapse-title text-tertiary'>{props.titre}</span>
+                <button className='background-primary text-tertiary' onClick={() => { 
                     setIsCollapsed(!isCollapsed);
                     } }>
                     <div className="fa-solid fa-chevron-up"></div>

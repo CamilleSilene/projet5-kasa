@@ -4,6 +4,9 @@ import logementsJson from "../../data/logements";
 import "./logement.scss";
 import Collapse from "../../components/Collapse/collapse";
 import SlideShow from "../../components/Slideshow/Slideshow";
+import Rating from "../../components/Rating/Rating";
+import Tags from "../../components/Tags/Tags";
+import Host from "../../components/Host/Host";
 
 //hook useParams prend les paramètres de l'URL définis dans les routes : ici 'id'
 //on filtre les logements par id dans le fichier json
@@ -22,41 +25,22 @@ const Location = () => {
   return (
     <div className="logementBody">
       <div className="slideShow-container">
-        {" "}
-        <SlideShow slides={logement.pictures} />{" "}
+        <SlideShow slides={logement.pictures} />
       </div>
-      <div>
-      <div className="first-block col-mobile-1 col-desktop-2">
-        <h1 className="text-primary">{logement.title}</h1>
-        <div className="locationLogement">
-          <span>{logement.location}</span>
-        </div>
-        <div className="tagLogement">
-          {logement.tags.map((tag, index) => {
-            return (
-              <span className="badge background-primary text-white" key={index}>
-                {tag}
-              </span>
-            );
-          })}
-        </div>
-      </div>
-      
-        <div class="second-block  col-mobile-1 col-desktop-2">
-          <div className="starLogement">
-            {Array.from(Array(5), (e, index) => {
-              const starClass = index < logement.rating ? "fa-star-active text-primary" : "fa-star-inactive";
-              const starClasses = `fa-solid fa-star ${starClass}`;
-              return <i key={index} className={starClasses}></i>;
-            })}
-          </div>
-          <div className="hostLogement">
-            <div className="hostLogementName text-primary">
-              {logement.host.name}
-            </div>
-            <img className="hostLogementImg" src={logement.host.picture} alt="host" />
-          </div>
 
+      <div className="logement-details">
+        <div className="first-block col-mobile-1 col-desktop-2">
+          <h1 className="text-primary">{logement.title}</h1>
+          <div className="locationLogement">
+            <span>{logement.location}</span>
+          </div>
+          <Tags tags={logement.tags} />
+        </div>
+      
+        <div className="second-block  col-mobile-1 col-desktop-2">
+          <Rating rating={logement.rating} />
+
+          <Host host={logement.host} />
         </div>
       </div>
       
@@ -72,6 +56,7 @@ const Location = () => {
           </ul>
         </Collapse>
       </div>
+
     </div>
   );
 };
