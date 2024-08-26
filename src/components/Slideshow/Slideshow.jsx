@@ -1,4 +1,4 @@
-import "./slideshow.scss";
+
 import { useState } from "react";
 
 const SlideShow = (props) => {
@@ -24,7 +24,7 @@ const SlideShow = (props) => {
       )}
       <div className="slidesWrapper">
         <img key={currentIndex} src={props.slides[currentIndex]} alt="photos" />
-        {props.slides.length > 1 && (<div className="slideshow-pagination text-tertiary">{currentIndex + 1}/{props.slides.length}</div>)}
+        {props.slides.length > 1 && (<div className="slideshow-pagination hidden-mobile text-tertiary">{currentIndex + 1}/{props.slides.length}</div>)}
       </div>
       {props.slides.length > 1 && (<div className="slideClick fa-solid fa-chevron-right text-tertiary" onClick={nextIndex} role="button"></div>
       )}

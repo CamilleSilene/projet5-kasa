@@ -1,7 +1,7 @@
 import { Navigate, useParams } from "react-router-dom";
 import logementsJson from "../../data/logements";
 
-import "./logement.scss";
+
 import Collapse from "../../components/Collapse/collapse";
 import SlideShow from "../../components/Slideshow/Slideshow";
 import Rating from "../../components/Rating/Rating";
@@ -44,11 +44,11 @@ const Location = () => {
         </div>
       </div>
       
-      <div className="collapseWrapperLogement">
-        <Collapse titre="Description" css="col-mobile-1 col-desktop-2">
+      <div className="collapseWrapperLogement d-flex-column">
+        <Collapse titre="Description" cssClasses="col-mobile-1 col-desktop-2">
           <p>{logement.description}</p>
         </Collapse>
-        <Collapse titre="Equipements" css="col-mobile-1 col-desktop-2">
+        <Collapse titre="Equipements" cssClasses="col-mobile-1 col-desktop-2">
           <ul className="collapse-list-style-none">
             {logement.equipments.map((equipment, index) => {
               return <li key={index}> {equipment}</li>;

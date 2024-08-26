@@ -1,4 +1,3 @@
-import './collapse.scss';
 import React, {useState} from 'react';
 
 const Collapse = (props) => {
@@ -10,8 +9,8 @@ const Collapse = (props) => {
     //création de toutes les classes qui vont aller dans l'élément
     // 'collapse' et 'collapsed' 
 
-    const classes = props.css + " collapse" + ( isCollapsed ? ' collapsed' : '' );
-
+    const contentClasses = " collapse-content background-secondary " + ( isCollapsed ? ' collapse-content-padding' : '' );
+    const classes = props.cssClasses + " collapse" + ( isCollapsed ? ' collapsed' : '' );
     return (
         <div className={classes}>
             <div className='collapse-header background-primary'>
@@ -22,7 +21,7 @@ const Collapse = (props) => {
                     <div className="fa-solid fa-chevron-up"></div>
                 </button>
             </div>
-            <div className='collapse-content background-secondary'>{props.children}</div>
+            <div className={contentClasses}>{props.children}</div>
         </div>
       );
     }

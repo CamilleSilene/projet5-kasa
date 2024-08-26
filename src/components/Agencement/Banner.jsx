@@ -1,7 +1,3 @@
-import './banner.scss'
-
-
-
 const Banner = (props) => {
     const classes = 'banner ' + props.css;
     return (

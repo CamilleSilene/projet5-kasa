@@ -2,7 +2,7 @@ import Banner from "../../components/Agencement/Banner";
 import imgBannerAbout from "../../assets/BannerAbout.png";
 import Collapse from "../../components/Collapse/collapse";
 import aproposJson from "../../data/apropos";
-import './apropos.scss';
+
 
 const Apropos = () => {
     return (

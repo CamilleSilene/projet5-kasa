@@ -5,7 +5,7 @@ import Apropos from './pages/Apropos/Apropos';
 import Logement from './pages/Logement/Logement';
 import Error from './components/Error/Error';
 import Layout from './components/Agencement/Layout';
-import './SASS/index.scss';
+
 
 
 function AppRoutes () {

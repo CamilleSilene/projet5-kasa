@@ -1,3 +1,5 @@
+@import "../../SASS/base/variables.scss";
+
 .container-cardsList {
     padding: 30px;
     margin-top: 20px;
@@ -10,6 +12,7 @@
     justify-content: center;
     border-radius: 15px; 
     width: 100%;
+    background-color: map-get($colors, secondary);
        
 }
 
@@ -17,8 +20,20 @@
     padding: 30px;
 }
 
-@media (max-width : 1023.98px) {
+@include mediamobile() {
     .CardsListWrapper {
-        background-color: transparent;
+        background-color: map-get($colors, none);
+    }
+
+    .container-cardsList {
+        padding-top :0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .container-bannerhome {
+        padding-bottom: 20px;
+        padding-top: 10px;
     }
 }

@@ -1,4 +1,4 @@
-
+@import "/src/SASS/base/base.scss";
 
 .container-banner-apropos {
     padding: 30px;
@@ -14,9 +14,9 @@
     gap: 20px;
 }
 
-@media screen and (max-width: 1023.98px){
+@include mediamobile() {
     .container-CollapseApropos {
         padding-left: 30px;
-        padding-right: 30px;
+        padding-right: 30px;        
     }
 }

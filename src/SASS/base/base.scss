@@ -32,9 +32,14 @@ body {
         width: 100%;
         margin-top: 2%;
     }
-    div:has(.col-mobile-1) {
+    .d-block {
         display: block;
     }
+    .d-flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
 @media (min-width: map-get($breakpoints, desktop) ) {
@@ -51,3 +56,6 @@ body {
         width: calc((100% - $gap * 3) / 3);
     }
 }
+
+
+
