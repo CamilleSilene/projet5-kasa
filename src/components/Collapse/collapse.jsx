@@ -21,14 +21,14 @@ const Collapse = (props) => {
         <div className={classes}>
             <div className='collapse-header background-primary'>
                 <span className='collapse-title text-tertiary'>{props.titre}</span>
-                <button className='background-primary text-tertiary' onClick={() => { 
+                <div className='button background-primary text-tertiary' onClick={() => { 
                     setIsCollapsed(!isCollapsed);
                     if(isInitialCollapsed) {
                         setIsInitialCollapsed(false);
                     }
                     } }>
                     <div className="fa-solid fa-chevron-up"></div>
-                </button>
+                </div>
             </div>
             <div className="collapse-content background-secondary">
             <div className="collapse-content-inner">{props.children}</div>
