@@ -21,6 +21,9 @@
     flex-wrap: wrap;    
     width: 100%;
     
+    @include mediamobile() {
+        height: 8rem;
+    }
 
     img {
         display: flex;
@@ -30,6 +33,9 @@
         object-position: center;  
         border-radius: 25px;           
         
+        @include mediamobile() {
+            //height: 15em;
+        }
     }
 }
 
