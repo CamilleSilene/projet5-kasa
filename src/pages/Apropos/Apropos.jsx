@@ -6,7 +6,7 @@ import aproposJson from "../../data/apropos";
 
 const Apropos = () => {
     return (
-        <div>
+        <div className="a-propos">
             <div className="container-banner-apropos">
                 <Banner bgImage={imgBannerAbout} alt="montagne et forêt"/>
             </div>
