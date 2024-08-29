@@ -1,14 +1,14 @@
 @import './variables.scss';
 
 
-@mixin mediamobile() {	
-    @media screen and (max-width: map-get($breakpoints, mobile)){
+@mixin mediamobile() {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
         @content;
     }
 }
 
 body {
-    
+
     margin: 0;
     font-family: 'Montserrat';
     font-size: 22px;
@@ -16,7 +16,7 @@ body {
 
 @each $name, $color in $colors {
     .text-#{$name} {
-        color:  $color;
+        color: $color;
     }
 
     .background-#{$name} {
@@ -24,38 +24,41 @@ body {
     }
 }
 
-@media (max-width: map-get($breakpoints, mobile) ) {
+@media (max-width: map-get($breakpoints, mobile)) {
     .hidden-mobile {
-        display:  none;
+        display: none;
     }
+
     .col-mobile-1 {
         width: 100%;
         margin-top: 2%;
     }
+
     .d-block {
         display: block;
     }
+
     .d-flex-column {
         display: flex;
         flex-direction: column;
     }
-    
+
 }
 
-@media (min-width: map-get($breakpoints, desktop) ) {
+@media (min-width: map-get($breakpoints, desktop)) {
     .hidden-desktop {
-        display:  none;
+        display: none;
     }
+
     .col-desktop-1 {
         width: 100%;
     }
+
     .col-desktop-2 {
         width: calc((100% - $gap) / 2);
     }
+
     .col-desktop-3 {
         width: calc((100% - $gap * 3) / 3);
     }
 }
-
-
-
