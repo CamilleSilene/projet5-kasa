@@ -3,8 +3,6 @@ import imgBannerHome from "../../assets/BannerHome.png"
 import logements from "../../data/logements.json"
 import Card from "../../components/CardsList/Card/Card"
 
-
-
 const Accueil = () => {
     return (
         <>
@@ -15,15 +13,12 @@ const Accueil = () => {
         <div className="container-cardsList">
             <div className="CardsListWrapper d-block">
                 {
-                    logements.map( (logement)=> <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
-                    )
+                    logements.map( (logement)=> <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />)
                 }
-        </div>
-       </div>
-             
+            </div>
+        </div>             
       </>
-    )
-    
+    )    
 }
 
 export default Accueil

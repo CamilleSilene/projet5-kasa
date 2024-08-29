@@ -1,7 +1,5 @@
 import { Navigate, useParams } from "react-router-dom";
 import logementsJson from "../../data/logements";
-
-
 import Collapse from "../../components/Collapse/collapse";
 import SlideShow from "../../components/Slideshow/Slideshow";
 import Rating from "../../components/Rating/Rating";
@@ -31,9 +29,11 @@ const Location = () => {
       <div className="logement-details">
         <div className="first-block col-mobile-1 col-desktop-2">
           <h1 className="text-primary">{logement.title}</h1>
+
           <div className="locationLogement">
             <span>{logement.location}</span>
           </div>
+          
           <Tags tags={logement.tags} />
         </div>
       
